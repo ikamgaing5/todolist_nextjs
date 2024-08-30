@@ -31,9 +31,9 @@ const AddTask = () => {
                 <h3 className="font-bold text-lg">Nouvelle Tâche</h3>
                 <div className="modal-action">
                 <input 
-                value={newTaskValue}onChange={e => setNewTaskValue(e.target.value)}
+                value={newTaskValue} onChange={e => setNewTaskValue(e.target.value)}
                 type="text" placeholder="Ecrivez ici" className="input input-bordered w-full" />
-                <button className="btn" type="submit">Valider</button>
+                {newTaskValue && (<button className="btn" type="submit">Valider</button>) }
                 </div>
             </form>
         </Modal>
